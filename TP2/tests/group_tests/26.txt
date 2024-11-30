@@ -1,0 +1,2 @@
+# Los valores de las monedas de la fila se muestran tal cual su orden correspondiente; separados por ;
+5; 10; 15; 20; 25; 30; 35; 40; 45; 50
