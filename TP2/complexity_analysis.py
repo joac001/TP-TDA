@@ -65,4 +65,4 @@ def run_analysis():
     plt.tight_layout()
     plt.savefig(tmp_file)
     plt.show()
-
+    print(f"Analisis completo. Imagen guardada en {tmp_file}")
