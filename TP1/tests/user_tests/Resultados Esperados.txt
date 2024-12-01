@@ -1,0 +1,6 @@
+# Para leer los resultados escribir el archivo con un número como nombre, la respuesta esperada en la siguiente línea y la ganancia en la siguiente.
+# Ejemplo:
+# 1.txt
+# Última moneda para Sophia; Última moneda para Mateo; Última moneda para Sophia; Primera moneda para Mateo; Primera moneda para Sophia; Primera moneda para Mateo; Última moneda para Sophia; Primera moneda para Mateo; Última moneda para Sophia
+# Ganancia de Sophia: 34
+
