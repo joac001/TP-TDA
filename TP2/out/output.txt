@@ -1,0 +1,218 @@
+Se corrieron los tests en c:\Users\joaco\Desktop\TP-TDA\TP2\tests/group_tests
+Para 1.txt se obtuvo:
+Ganancia Sophia: 6
+Ganancia Mateo: 10
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (1), Mateo agarra la moneda (10), Sofia agarra la moneda (5)
+
+Para 10.txt se obtuvo:
+Ganancia Sophia: 25
+Ganancia Mateo: 11
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (20), Mateo agarra la moneda (10), Sofia agarra la moneda (1), Mateo agarra la moneda (5)
+
+Para 11.txt se obtuvo:
+Ganancia Sophia: 61
+Ganancia Mateo: 13
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (50), Mateo agarra la moneda (1), Sofia agarra la moneda (2), Mateo agarra la moneda (5), Sofia agarra la moneda (10), Mateo agarra la moneda (6)
+
+Para 12.txt se obtuvo:
+Ganancia Sophia: 3
+Ganancia Mateo: 3
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (1), Mateo agarra la moneda (1)Sofia agarra la moneda (1), Mateo agarra la moneda (1)Sofia agarra la moneda (1), Mateo agarra la moneda (1)
+
+Para 13.txt se obtuvo:
+Ganancia Sophia: 10
+Ganancia Mateo: 10
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (5), Mateo agarra la moneda (5)Sofia agarra la moneda (5), Mateo agarra la moneda (5)
+
+Para 14.txt se obtuvo:
+Ganancia Sophia: 60
+Ganancia Mateo: 40
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (40), Mateo agarra la moneda (30), Sofia agarra la moneda (10), Mateo agarra la moneda (20)
+
+Para 15.txt se obtuvo:
+Ganancia Sophia: 18
+Ganancia Mateo: 12
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (10), Mateo agarra la moneda (8), Sofia agarra la moneda (6), Mateo agarra la moneda (2), Sofia agarra la moneda (4)
+
+Para 16.txt se obtuvo:
+Ganancia Sophia: 15
+Ganancia Mateo: 10
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (9), Mateo agarra la moneda (7), Sofia agarra la moneda (5), Mateo agarra la moneda (1), Sofia agarra la moneda (3)
+
+Para 17.txt se obtuvo:
+Ganancia Sophia: 21
+Ganancia Mateo: 10
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (16), Mateo agarra la moneda (8), Sofia agarra la moneda (4), Mateo agarra la moneda (1), Sofia agarra la moneda (2)
+
+Para 18.txt se obtuvo:
+Ganancia Sophia: 18
+Ganancia Mateo: 12
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (12), Mateo agarra la moneda (9), Sofia agarra la moneda (3), Mateo agarra la moneda (6)
+
+Para 19.txt se obtuvo:
+Ganancia Sophia: 42
+Ganancia Mateo: 28
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (28), Mateo agarra la moneda (21), Sofia agarra la moneda (7), Mateo agarra la moneda (14)
+
+Para 2.txt se obtuvo:
+Ganancia Sophia: 10
+Ganancia Mateo: 15
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (3), Mateo agarra la moneda (7), Sofia agarra la moneda (2), Mateo agarra la moneda (8), Sofia agarra la moneda (5)
+
+Para 20.txt se obtuvo:
+Ganancia Sophia: 18
+Ganancia Mateo: 10
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (11), Mateo agarra la moneda (7), Sofia agarra la moneda (5), Mateo agarra la moneda (2), Sofia agarra la moneda (3)
+
+Para 21.txt se obtuvo:
+Ganancia Sophia: 35
+Ganancia Mateo: 20
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (25), Mateo agarra la moneda (16), Sofia agarra la moneda (9), Mateo agarra la moneda (1), Sofia agarra la moneda (4)
+
+Para 22.txt se obtuvo:
+Ganancia Sophia: 30
+Ganancia Mateo: 25
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (10), Mateo agarra la moneda (9), Sofia agarra la moneda (8), Mateo agarra la moneda (7), Sofia agarra la moneda (6), Mateo agarra la moneda (5), Sofia agarra la moneda (4), Mateo agarra la moneda (3), Sofia agarra la moneda (1), Mateo agarra la moneda (2)
+
+Para 23.txt se obtuvo:
+Ganancia Sophia: 30
+Ganancia Mateo: 25
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (10), Mateo agarra la moneda (9), Sofia agarra la moneda (8), Mateo agarra la moneda (7), Sofia agarra la moneda (6), Mateo agarra la moneda (5), Sofia agarra la moneda (4), Mateo agarra la moneda (3), Sofia agarra la moneda (2), Mateo agarra la moneda (1)
+
+Para 24.txt se obtuvo:
+Ganancia Sophia: 5
+Ganancia Mateo: 5
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (1), Mateo agarra la moneda (1)Sofia agarra la moneda (1), Mateo agarra la moneda (1)Sofia agarra la moneda (1), Mateo agarra la moneda (1)Sofia agarra la moneda (1), Mateo agarra la moneda (1)Sofia agarra la moneda (1), Mateo agarra la moneda (1)
+
+Para 25.txt se obtuvo:
+Ganancia Sophia: 60
+Ganancia Mateo: 50
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (20), Mateo agarra la moneda (18), Sofia agarra la moneda (16), Mateo agarra la moneda (14), Sofia agarra la moneda (12), Mateo agarra la moneda (10), Sofia agarra la moneda (8), Mateo agarra la moneda (6), Sofia agarra la moneda (2), Mateo agarra la moneda (4)
+
+Para 26.txt se obtuvo:
+Ganancia Sophia: 150
+Ganancia Mateo: 125
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (50), Mateo agarra la moneda (45), Sofia agarra la moneda (40), Mateo agarra la moneda (35), Sofia agarra la moneda (30), Mateo agarra la moneda (25), Sofia agarra la moneda (20), Mateo agarra la moneda (15), Sofia agarra la moneda (5), Mateo agarra la moneda (10)
+
+Para 27.txt se obtuvo:
+Ganancia Sophia: 90
+Ganancia Mateo: 75
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (30), Mateo agarra la moneda (27), Sofia agarra la moneda (24), Mateo agarra la moneda (21), Sofia agarra la moneda (18), Mateo agarra la moneda (15), Sofia agarra la moneda (12), Mateo agarra la moneda (9), Sofia agarra la moneda (3), Mateo agarra la moneda (6)
+
+Para 28.txt se obtuvo:
+Ganancia Sophia: 55
+Ganancia Mateo: 45
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (19), Mateo agarra la moneda (17), Sofia agarra la moneda (15), Mateo agarra la moneda (13), Sofia agarra la moneda (11), Mateo agarra la moneda (9), Sofia agarra la moneda (7), Mateo agarra la moneda (5), Sofia agarra la moneda (1), Mateo agarra la moneda (3)
+
+Para 29.txt se obtuvo:
+Ganancia Sophia: 71
+Ganancia Mateo: 58
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (29), Mateo agarra la moneda (23), Sofia agarra la moneda (19), Mateo agarra la moneda (17), Sofia agarra la moneda (13), Mateo agarra la moneda (11), Sofia agarra la moneda (7), Mateo agarra la moneda (5), Sofia agarra la moneda (2), Mateo agarra la moneda (3)
+
+Para 3.txt se obtuvo:
+Ganancia Sophia: 12
+Ganancia Mateo: 9
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (6), Mateo agarra la moneda (5), Sofia agarra la moneda (4), Mateo agarra la moneda (3), Sofia agarra la moneda (1), Mateo agarra la moneda (2)
+
+Para 30.txt se obtuvo:
+Ganancia Sophia: 682
+Ganancia Mateo: 341
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (512), Mateo agarra la moneda (256), Sofia agarra la moneda (128), Mateo agarra la moneda (64), Sofia agarra la moneda (32), Mateo agarra la moneda (16), Sofia agarra la moneda (8), Mateo agarra la moneda (4), Sofia agarra la moneda (1), Mateo agarra la moneda (2)
+
+Para 31.txt se obtuvo:
+Ganancia Sophia: 300
+Ganancia Mateo: 250
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (100), Mateo agarra la moneda (90), Sofia agarra la moneda (80), Mateo agarra la moneda (70), Sofia agarra la moneda (60), Mateo agarra la moneda (50), Sofia agarra la moneda (40), Mateo agarra la moneda (30), Sofia agarra la moneda (10), Mateo agarra la moneda (20)
+
+Para 4.txt se obtuvo:
+Ganancia Sophia: 22
+Ganancia Mateo: 11
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (7), Mateo agarra la moneda (8), Sofia agarra la moneda (15), Mateo agarra la moneda (3)
+
+Para 5.txt se obtuvo:
+Ganancia Sophia: 4
+Ganancia Mateo: 2
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (2)Mateo agarra la moneda (2), Sofia agarra la moneda (2)
+
+Para 6.txt se obtuvo:
+Ganancia Sophia: 20
+Ganancia Mateo: 16
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (8), Mateo agarra la moneda (7), Sofia agarra la moneda (6), Mateo agarra la moneda (5), Sofia agarra la moneda (4), Mateo agarra la moneda (3), Sofia agarra la moneda (1), Mateo agarra la moneda (2)
+
+Para 7.txt se obtuvo:
+Ganancia Sophia: 40
+Ganancia Mateo: 22
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (10), Mateo agarra la moneda (20), Sofia agarra la moneda (30), Mateo agarra la moneda (2)
+
+Para 8.txt se obtuvo:
+Ganancia Sophia: 16
+Ganancia Mateo: 12
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (7), Mateo agarra la moneda (6), Sofia agarra la moneda (5), Mateo agarra la moneda (4), Sofia agarra la moneda (3), Mateo agarra la moneda (1), Sofia agarra la moneda (2)
+
+Para 9.txt se obtuvo:
+Ganancia Sophia: 13
+Ganancia Mateo: 12
+
+Se jugo de la siguiente manera: 
+Sofia agarra la moneda (7), Mateo agarra la moneda (10), Sofia agarra la moneda (5), Mateo agarra la moneda (1), Sofia agarra la moneda (2)
+
