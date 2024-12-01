@@ -65,7 +65,7 @@ def run_test(path=''):
                 out_file.write(f"Se jugo de la siguiente manera: \n")
 
                 for step in steps:
-                    out_file.write(f"{step}, ")
+                    out_file.write(f", {step}")
                 out_file.write("\n\n")
     
     out_file.close()

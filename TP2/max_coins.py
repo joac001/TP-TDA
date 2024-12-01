@@ -10,8 +10,6 @@ def max_coins(coins):
     n = len(coins)
     dp = [[0] * n for _ in range(n)]
 
-    steps = []
-
     # length es el núero de monedas en el rango
     for length in range(1, n +1):
 
@@ -45,4 +43,34 @@ def max_coins(coins):
 
     # La ganancia de Sophia es: dp[0][n-1]
     # La ganancia de mateo es: sum(coins) - dp[i][j]
-    return dp[0][n-1], abs(sum(coins) - dp[0][n-1]), steps
+    return dp[0][n-1], abs(sum(coins) - dp[0][n-1]), reconstruct_steps(coins, dp)
+
+
+def reconstruct_steps(coins, dp):
+    steps = []
+    i, j = 0, len(coins) - 1
+    turn = 'Sofia'
+
+    while i <= j:
+        if i == j:
+            steps.append(f"{turn} agarra la moneda ({coins[i]})")
+            break
+
+        if coins[i + 1] > coins[j]:
+            if dp[i][j] == coins[i] + dp[i + 2][j]:
+                steps.append(f"{turn} agarra la moneda ({coins[i]})")
+                i += 1
+            else:
+                steps.append(f"{turn} agarra la moneda ({coins[j]})")
+                j -= 1
+        else:
+            if dp[i][j] == coins[j] + dp[i][j - 2]:
+                steps.append(f"{turn} agarra la moneda ({coins[j]})")
+                j -= 1
+            else:
+                steps.append(f"{turn} agarra la moneda ({coins[i]})")
+                i += 1
+
+        turn = 'Mateo' if turn == 'Sofia' else 'Sofia'
+
+    return steps
