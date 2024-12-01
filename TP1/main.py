@@ -1,4 +1,5 @@
 from graficos import correr_grafico
+from monedas import ejecutar_desde_archivo
 from tests import correr_tests
 
 RUTA_TESTS_CATEDRA = "/tests/given_tests"
@@ -18,22 +19,25 @@ def main():
     execute_option(option) 
 
 def print_menu():
-    print("1. Correr test dados por la catedra.")
-    print("2. Correr los test creados por el grupo.")
-    print("3. Correr los test creados por mi. (Recordar ingresar los test en la carpeta 'tests/user_tests/' del proyecto)")
-    print("4. Correr el gráfico de datos.")
-    print("5. Salir.")
+    print("1. Correr a partir de la ruta completa de un archivo.")
+    print("2. Correr los test dados por la catedra.")
+    print("3. Correr los test creados por el grupo.")
+    print("4. Correr los test creados por mi. (Recordar ingresar los test en la carpeta 'tests/user_tests/' del proyecto)")
+    print("5. Correr el gráfico de datos.")
+    print("6. Salir.")
 
 def execute_option(option):
     if option == "1":
-        correr_tests(RUTA_TESTS_CATEDRA)
+        ejecutar_desde_archivo(input("Ingrese la ruta del archivo: "))
     elif option == "2":
-        correr_tests(RUTA_TESTS_GRUPO)
+        correr_tests(RUTA_TESTS_CATEDRA)
     elif option == "3":
-        correr_tests(RUTA_TESTS_USUARIO)
+        correr_tests(RUTA_TESTS_GRUPO)
     elif option == "4":
-        correr_grafico()
+        correr_tests(RUTA_TESTS_USUARIO)
     elif option == "5":
+        correr_grafico()
+    elif option == "6":
         return
     else:
         print("Opcion invalida. Intente nuevamente.")
