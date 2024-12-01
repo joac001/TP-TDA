@@ -10,7 +10,7 @@ def max_coins(coins):
     n = len(coins)
     dp = [[0] * n for _ in range(n)]
 
-    # steps = []
+    steps = []
 
     # length es el núero de monedas en el rango
     for length in range(1, n +1):
@@ -43,6 +43,6 @@ def max_coins(coins):
             # Guardar el paso que ocurrio ¿Como guardo que moneda agarro Mateo?
             # Para sofia seria steps.append(dp[i][j])
 
-    return dp[0][n-1] # Devolver los 'steps' y el valor acumulado de mateo.
-
-# Valor acumulado de mateo es: sum(coins) - dp[i][j]
+    # La ganancia de Sophia es: dp[0][n-1]
+    # La ganancia de mateo es: sum(coins) - dp[i][j]
+    return dp[0][n-1], abs(sum(coins) - dp[0][n-1]), steps

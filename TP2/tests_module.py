@@ -40,7 +40,7 @@ def run_test(path=''):
 
     print("#"*75)
     print()
-    print(f"Running test on {test_directory}")
+    print(f"Corriendo test en {test_directory}")
     print("-"*75)   
     print("El resultado de este test se encuentra en el directorio out/ dentro del proyecto.")
     print("Para guardar estos resultados cambiarle el nombre al archivo de salida.\nDe lo contrario se sobreescribira.")
@@ -55,10 +55,18 @@ def run_test(path=''):
             if file.endswith(".txt"):
                 p = os.path.join(test_directory, file)
                 test_set = read_test_case(p)
-                
-                resultado = max_coins(test_set) # Faltaria recibir los 'steps' y el valor acumuladod de mateo.
-                obtenidos.append(resultado)
-                out_file.write(f"Para {test_set} se obtuvo el resultado {obtenidos[-1]}\n") # Agregar los 'steps' y el valor acumulado de mateo.
+
+                sophia, mateo, steps = max_coins(test_set)
+
+                obtenidos.append([sophia, mateo, steps])
+                out_file.write(f"Para {file} se obtuvo:\n")
+                out_file.write(f"Ganancia Sophia: {sophia}\n")
+                out_file.write(f"Ganancia Mateo: {mateo}\n\n")
+                out_file.write(f"Se jugo de la siguiente manera: \n")
+
+                for step in steps:
+                    out_file.write(f"{step}, ")
+                out_file.write("\n\n")
     
     out_file.close()
         

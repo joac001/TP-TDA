@@ -1,1 +1,71 @@
-outfile
+Se corrieron los tests en c:\Users\joaco\Desktop\TP-TDA\TP2\tests/given_tests
+Para 10.txt se obtuvo:
+Ganancia Sophia: 2338
+Ganancia Mateo: 1780
+
+Se jugo de la siguiente manera: 
+
+
+Para 100.txt se obtuvo:
+Ganancia Sophia: 28844
+Ganancia Mateo: 22095
+
+Se jugo de la siguiente manera: 
+
+
+Para 1000.txt se obtuvo:
+Ganancia Sophia: 1401590
+Ganancia Mateo: 1044067
+
+Se jugo de la siguiente manera: 
+
+
+Para 10000.txt se obtuvo:
+Ganancia Sophia: 34107537
+Ganancia Mateo: 25730392
+
+Se jugo de la siguiente manera: 
+
+
+Para 20.txt se obtuvo:
+Ganancia Sophia: 5234
+Ganancia Mateo: 4264
+
+Se jugo de la siguiente manera: 
+
+
+Para 2000.txt se obtuvo:
+Ganancia Sophia: 2869340
+Ganancia Mateo: 2155520
+
+Se jugo de la siguiente manera: 
+
+
+Para 25.txt se obtuvo:
+Ganancia Sophia: 7491
+Ganancia Mateo: 6523
+
+Se jugo de la siguiente manera: 
+
+
+Para 5.txt se obtuvo:
+Ganancia Sophia: 1483
+Ganancia Mateo: 1268
+
+Se jugo de la siguiente manera: 
+
+
+Para 50.txt se obtuvo:
+Ganancia Sophia: 14976
+Ganancia Mateo: 13449
+
+Se jugo de la siguiente manera: 
+
+
+Para 5000.txt se obtuvo:
+Ganancia Sophia: 9939221
+Ganancia Mateo: 7617856
+
+Se jugo de la siguiente manera: 
+
+
