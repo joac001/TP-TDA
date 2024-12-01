@@ -1,0 +1,11 @@
+1.txt
+Última moneda para Sophia; Última moneda para Mateo; Última moneda para Sophia; Primera moneda para Mateo; Primera moneda para Sophia; Primera moneda para Mateo; Última moneda para Sophia; Primera moneda para Mateo; Última moneda para Sophia
+Ganancia de Sophia: 34
+
+2.txt
+Última moneda para Sophia; Primera moneda para Mateo; Primera moneda para Sophia; Primera moneda para Mateo; Primera moneda para Sophia; Primera moneda para Mateo; Primera moneda para Sophia; Última moneda para Mateo
+Ganancia de Sophia: 394
+
+3.txt
+Primera moneda para Sophia; Última moneda para Mateo; Primera moneda para Sophia; Última moneda para Mateo; Primera moneda para Sophia; Última moneda para Mateo; Primera moneda para Sophia; Última moneda para Mateo; Última moneda para Sophia
+Ganancia de Sophia: 35
