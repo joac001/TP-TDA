@@ -56,7 +56,7 @@ def run_analysis():
     ax2.grid(True)
     ax2.legend()
     
-    tmp_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "complexity_analysis.png")
+    tmp_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tmp", "complexity_analysis.png")
     
 
     if not os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "tmp")):
