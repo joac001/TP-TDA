@@ -64,8 +64,12 @@ def run_test(path=''):
                 out_file.write(f"Ganancia Mateo: {mateo}\n\n")
                 out_file.write(f"Se jugo de la siguiente manera: \n")
 
+                steps_len = len(steps)
                 for step in steps:
-                    out_file.write(f", {step}")
+                    if step != steps[steps_len - 1]:
+                        out_file.write(f"{step}, ")
+                    else:
+                        out_file.write(f"{step}")
                 out_file.write("\n\n")
     
     out_file.close()
