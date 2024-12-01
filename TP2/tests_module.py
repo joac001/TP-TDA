@@ -21,7 +21,11 @@ def read_test_case(path):
             if line.startswith('#'):
                 continue
             else:
-                numbers = list(map(int, line.split(';')))
+                try:
+                    numbers = list(map(int, line.split(';')))
+                except ValueError:
+                    print(f"\n\nEl archivo {path} no respeta los requisitos de los archivos de tests.\nPuedes encontrar los requisitos en el archivo READEME.md.")
+                    return []
     
     return numbers
 
@@ -35,6 +39,13 @@ def run_test(path=''):
     
 
     test_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), path)
+    
+    try:
+        os.listdir(test_directory)
+    except NotADirectoryError:
+        print("\n\nLa ruta enviada no es un directorio.")
+        return
+
     out_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), "out")
     obtenidos = []
 
@@ -50,12 +61,13 @@ def run_test(path=''):
 
     with open(f"{out_directory}/output.txt", "w") as out_file:
         out_file.write(f"Se corrieron los tests en {test_directory}\n")
-   
+        
         for file in os.listdir(test_directory):
             if file.endswith(".txt"):
                 p = os.path.join(test_directory, file)
                 test_set = read_test_case(p)
-
+                if test_set == []:
+                    continue
                 sophia, mateo, steps = max_coins(test_set)
 
                 obtenidos.append([sophia, mateo, steps])
