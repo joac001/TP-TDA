@@ -1,5 +1,5 @@
 from tests_module import run_test
-import os
+from complexity_analysis import run_analysis
 
 def main():
 
@@ -14,11 +14,11 @@ def main():
     execute_option(option) 
 
 def print_menu():
-      
     print("1. Correr test dados por la catedra.")
     print("2. Correr los test creados por el grupo.")
-    print("3. Correr los test creados por mi. (Recordar ingresar los test en la carpeta 'tests/user_test/' del proyecto)")
-    print("4. Salir.\n")
+    print("3. Correr los test creados por mi.")
+    print("4. Analisis de complejidad.")
+    print("5. Salir.\n")
 
 
 def execute_option(option):
@@ -29,6 +29,8 @@ def execute_option(option):
     elif option == "3":
         run_test()
     elif option == "4":
+        run_analysis()
+    elif option == "5":
         return
     else:
         print("Opcion invalida. Intente nuevamente.")
