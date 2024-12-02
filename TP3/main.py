@@ -77,9 +77,9 @@ def execute_aproximacion(option):
 
 def execute_greedy(option):
     if option == GIVEN:
-        run_test_greedy("../tests\given_tests")
+        run_test_greedy("../tests/given_tests")
     elif option == GROUP:
-        run_test_greedy("../tests\group_tests")
+        run_test_greedy("../tests/group_tests")
     elif option == USER:
         run_test_greedy()
     elif option == SALIR:
