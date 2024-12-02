@@ -1,4 +1,4 @@
-from utils import *
+from backtracking.utils import *
 import sys
 
 from common.game_logic import *
@@ -81,4 +81,4 @@ def save_output(test_name, barcos, demanda_total):
                 print(f"{barco_idx}: ", pos[0])
         print(f"Demanda cumplida: {demanda_cumplida}")
         print(f"Demanda total: {demanda_total}\n")
-    sys.stdout = sys.__stdout_
+    sys.stdout = sys.__stdout__

@@ -1,5 +1,4 @@
 from common.test_reader import read_test_case
-import time
 
 VERTICAL = 'V'
 HORIZONTAL = "H"
@@ -95,34 +94,3 @@ def batalla_naval_greedy(demandas_filas, demandas_columnas, barcos):
     demanda_cumplida = demanda_total - demanda_incumplida
     
     return tablero , demanda_total, demanda_cumplida , demanda_incumplida 
-
-def main ():
-
-    file = read_test_case ('tests/given_tests/12_12_21.txt')
-    
-    filas = file [0] 
-    columnas = file [1]
-    barcos = file [2]
-
-    inicio = time.time()
-
-    tablero, demanda_total, demanda_cumplida, demanda_incumplida  = batalla_naval_greedy (filas, columnas , barcos)
-
-    fin = time.time()
-
-    print ("\n Demanda total: " + str(demanda_total))
-    print (" Demanda cumplida: " + str(demanda_cumplida))
-    print (" Demanda incumplida: " + str(demanda_incumplida))
-        
-#    print ("\n")
-   
-    for f in tablero:
-        print(" ".join(map(str, f)))
-   
-#    print ("\n")
-    
-    print ("\n Tiempo de ejecucion: %0.10f segundos." % (fin-inicio))
-
-#    print ("\n")
-
-main()

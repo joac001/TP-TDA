@@ -53,9 +53,9 @@ def elegir_implementacion (option):
 
 def execute_backtracking(option):
     if option == "1":
-        run_test_backtracking("tests/given_tests")
+        run_test_backtracking("../tests/given_tests")
     elif option == "2":
-        run_test_backtracking("tests/group_tests")
+        run_test_backtracking("../tests/group_tests")
     elif option == "3":
         run_test_backtracking()
     elif option == "5":
@@ -65,9 +65,9 @@ def execute_backtracking(option):
 
 def execute_aproximacion(option):
     if option == GIVEN:
-        run_test_aproximacion("tests/given_tests")
+        run_test_aproximacion("../tests/given_tests")
     elif option == GROUP:
-        run_test_aproximacion("tests/group_tests")
+        run_test_aproximacion("../tests/group_tests")
     elif option == USER:
         run_test_aproximacion()
     elif option == SALIR:
@@ -77,9 +77,9 @@ def execute_aproximacion(option):
 
 def execute_greedy(option):
     if option == GIVEN:
-        run_test_greedy("tests/given_tests")
+        run_test_greedy("../tests\given_tests")
     elif option == GROUP:
-        run_test_greedy("tests/group_tests")
+        run_test_greedy("../tests\group_tests")
     elif option == USER:
         run_test_greedy()
     elif option == SALIR:

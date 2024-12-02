@@ -1,3 +1,5 @@
+from common.game_logic import hay_adyacencias 
+
 '''
     Pre: 'demandas' es un array con los valores de las demandas que
          tiene una fila/columna.
@@ -153,7 +155,7 @@ def obtener_candidatos(tablero, demanda_filas, demanda_columnas, barco_size, tod
     for c in candidatos_columna:
         filas_disponibles = []
         for f in range(len(demanda_filas)):
-            if demanda_filas[f] == 0 or tablero[f][c] != None:
+            if ((demanda_filas[f] == 0) or (tablero[f][c] != None)):
                 continue
             elif not hay_adyacencias(f, c, tablero):
                 filas_disponibles.append(f)

@@ -1,4 +1,4 @@
-from utils import *
+from aproximacion.utils import *
 from common.test_reader import *
 
 def aproximacion_batalla_naval(tablero, demanda_filas, demanda_columnas, barcos):
@@ -20,7 +20,7 @@ def aproximacion_batalla_naval(tablero, demanda_filas, demanda_columnas, barcos)
                 continue
             # -------------------- Colocamos un barco --------------------
             colocar_barco(alternativa, tablero, barco_idx)
-            actualizar_demandas(alternativa, demanda_filas, demanda_columnas)
+            actualizar_demandas(alternativa, demanda_filas, demanda_columnas, False)
             puestos[barco] = alternativa
             hubo_inserciones = True
             # ------------------- Actualizamos demandas -------------------

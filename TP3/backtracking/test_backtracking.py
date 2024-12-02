@@ -1,4 +1,4 @@
-from backtracking import *
+from backtracking.backtracking import batalla_naval, save_output
 from common.test_reader import read_test_case
 import os
 
@@ -17,7 +17,7 @@ def run_test(path=''):
         print("\n\nLa ruta enviada no es un directorio.")
         return
 
-    out_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), "out")
+    out_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../out")
 
     print("#"*75)
     print()
@@ -39,7 +39,7 @@ def run_test(path=''):
                 if test_set == []:
                     continue
                 
-                tablero = [[None for _ in range(m)] for _ in range(n)]
+                tablero = [[None for _ in range(len(test_set[1]))] for _ in range(len(test_set[0]))]
                 puestos = batalla_naval(tablero, test_set[2], test_set[0], test_set[1])
                 save_output("", puestos, sum(test_set[0]) + sum(test_set[1]))
                 
