@@ -63,8 +63,6 @@ def execute_backtracking(option):
         test_backtracking("tests/group_tests")
     elif option == "3":
         test_backtracking()
-    elif option == "4":
-        run_analysis()
     elif option == "5":
         return
     else:
