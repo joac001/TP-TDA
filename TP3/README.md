@@ -8,10 +8,10 @@ Para correrel sistema ejecute el main.
 ```
 
 Una vez ejecutado el main se mostrara un menu con las siguientes opciones:
-![menu](public/primer menu.png)
+![menu](public/primer_menu.png)
 
 Se debe elegir la implementacion que se quiere probar. Luego se mostrara las siguientes opciones:
-![menu](public/segundo menu.png)
+![menu](public/segundo_menu.png)
 
 ### 1. Correr los test proporcionados por la catedra
 Para correr los test ingrese 1. El resultado de los test se encuentra en `./out/output.txt`.
