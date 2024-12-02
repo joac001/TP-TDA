@@ -11,4 +11,4 @@ Este repositorio contiene un trabajo práctico integrador que reúne tres trabaj
 En cada una de estas carpetas se encontrará un archivo `README.md` que describe en detalle cómo ejecutar los programas correspondientes.
 
 ## Informe
-Para más detalles, puede consultar el [informe del trabajo práctico](Informe TP TDA.pdf).
+Para más detalles, puede consultar el [informe del trabajo práctico](https://github.com/joac001/TP-TDA/blob/TP3/Informe%20TP%20TDA.pdf).
