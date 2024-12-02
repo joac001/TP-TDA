@@ -1,0 +1,9 @@
+{
+    "python.analysis.extraPaths": [
+        "./TP3/common",
+        "./TP3/greedy",
+        "./TP3/greedy",
+        "./TP3/backtracking",
+        "./TP3/aproximacion"
+    ]
+}
