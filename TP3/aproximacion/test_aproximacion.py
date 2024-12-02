@@ -35,6 +35,8 @@ def run_test(path=''):
 
         for file in os.listdir(test_directory):
             if file.endswith(".txt"):
+                if file[0] == 'R': # Ignoramos los archivos de 'Resultados esperados'.
+                    continue
                 p = os.path.join(test_directory, file)
                 test_set = read_test_case(p)
                 if test_set == []:

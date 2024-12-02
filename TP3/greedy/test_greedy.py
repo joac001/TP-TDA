@@ -29,11 +29,13 @@ def run_test(path=''):
     print()
     print("#"*75)
 
-    with open(f"{out_directory}\output.txt", "w") as out_file:
+    with open(f"{out_directory}/output.txt", "w") as out_file:
         out_file.write(f"Se corrieron los tests en {test_directory}\n")
         
         for file in os.listdir(test_directory):
             if file.endswith(".txt"):
+                if file[0] == 'R': # Ignoramos los archivos de 'Resultados esperados'.
+                    continue
                 p = os.path.join(test_directory, file)
                 test_set = read_test_case(p)
                 if test_set == []:
