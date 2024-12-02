@@ -36,6 +36,7 @@ El sistema tiene la capacidad de ejecutar más de un test a la vez, por lo que p
 6. Cualquier otra linea que no sea la que contenga dichos valores debe comenzar con '#'.
 
 Ejemplo:
+```bash
 3
 1
 2
@@ -46,4 +47,4 @@ Ejemplo:
 
 1
 1
-
+```
