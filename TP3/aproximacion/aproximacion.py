@@ -39,20 +39,20 @@ def aproximacion_batalla_naval(tablero, demanda_filas, demanda_columnas, barcos)
             del demandas[(idx, tipo_demanda)]
     return puestos
 
-def save_output(test_name, barcos, demanda_total):
+def save_output(test_name, barcos, demanda_total, f):
     puestos = list(barcos.items())
     puestos.sort(key=lambda x: x[0][0])
     demanda_cumplida = 0
-    with open('output.txt', 'a') as f:
-        sys.stdout = f
-        print(test_name)
-        print('Posiciones:')
-        for (barco_idx, barco_size), pos in puestos:
-            demanda_cumplida += barco_size*2
-            if len(pos) > 1:
-                print(f"{barco_idx}: ", pos[0], " - ", pos[-1])
-            else:
-                print(f"{barco_idx}: ", pos[0])
-        print(f"Demanda cumplida: {demanda_cumplida}")
-        print(f"Demanda total: {demanda_total}\n")
+    
+    sys.stdout = f
+    print(test_name)
+    print('Posiciones:')
+    for (barco_idx, barco_size), pos in puestos:
+        demanda_cumplida += barco_size*2
+        if len(pos) > 1:
+            print(f"{barco_idx}: ", pos[0], " - ", pos[-1])
+        else:
+            print(f"{barco_idx}: ", pos[0])
+    print(f"Demanda cumplida: {demanda_cumplida}")
+    print(f"Demanda total: {demanda_total}\n")
     sys.stdout = sys.__stdout__

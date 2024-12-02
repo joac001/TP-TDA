@@ -41,7 +41,7 @@ def run_test(path=''):
                 
                 tablero = [[None for _ in range(len(test_set[1]))] for _ in range(len(test_set[0]))]
                 puestos = batalla_naval(tablero, test_set[2], test_set[0], test_set[1])
-                save_output("", puestos, sum(test_set[0]) + sum(test_set[1]))
+                save_output(file, puestos, sum(test_set[0]) + sum(test_set[1]), out_file)
                 
                 out_file.write("\n\n")
     

@@ -25,7 +25,7 @@ def print_menu_general():
     print("1. Correr test dados por la catedra.")
     print("2. Correr los test creados por el grupo.")
     print("3. Correr los test creados propios.")
-    print("5. Salir.\n")
+    print("4. Salir.\n")
 
 def print_menu_principal():
     print("1. Backtracking")
@@ -52,13 +52,13 @@ def elegir_implementacion (option):
         print("Opcion invalida. Intente nuevamente.")
 
 def execute_backtracking(option):
-    if option == "1":
+    if option == GIVEN:
         run_test_backtracking("../tests/given_tests")
-    elif option == "2":
+    elif option == GROUP:
         run_test_backtracking("../tests/group_tests")
-    elif option == "3":
+    elif option == USER:
         run_test_backtracking()
-    elif option == "5":
+    elif option == SALIR:
         return
     else:
         print("Opcion invalida. Intente nuevamente.")
@@ -77,9 +77,9 @@ def execute_aproximacion(option):
 
 def execute_greedy(option):
     if option == GIVEN:
-        run_test_greedy("../tests/given_tests")
+        run_test_greedy("../tests\given_tests")
     elif option == GROUP:
-        run_test_greedy("../tests/group_tests")
+        run_test_greedy("../tests\group_tests")
     elif option == USER:
         run_test_greedy()
     elif option == SALIR:

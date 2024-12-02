@@ -41,9 +41,12 @@ def run_test(path=''):
                 
                 tablero, demanda_total, demanda_cumplida, demanda_incumplida = batalla_naval_greedy (test_set[0], test_set[1], test_set[2])
 
+                out_file.write(f"Para {file} se obtuvo:\n")
                 out_file.write("Tablero: \n")
-                for f in tablero:
-                    out_file.write(" ".join(map(str, f)))
+                for f in range(len(tablero)):
+                    for c in  range(len(tablero[f])):
+                        out_file.write(" "+ str(tablero[f][c]))
+                    out_file.write("\n")
                 
                 out_file.write("\n Demanda total: " + str(demanda_total))
                 out_file.write("\n Demanda cumplida: " + str(demanda_cumplida))

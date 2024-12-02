@@ -31,7 +31,8 @@ def run_test(path=''):
 
     with open(f"{out_directory}/output.txt", "w") as out_file:
         out_file.write(f"Se corrieron los tests en {test_directory}\n")
-        
+        out_file.write("\n")
+
         for file in os.listdir(test_directory):
             if file.endswith(".txt"):
                 p = os.path.join(test_directory, file)
@@ -41,9 +42,8 @@ def run_test(path=''):
                 
                 tablero = [[None for _ in range(len(test_set[1]))] for _ in range(len(test_set[0]))]
                 puestos = aproximacion_batalla_naval(tablero, test_set[0], test_set[1], test_set[2])
-                save_output("", puestos, sum(test_set[0]) + sum(test_set[1]))
+                save_output(file, puestos, sum(test_set[0]) + sum(test_set[1]) , out_file)
 
-                out_file.write("\n\n")
     
     out_file.close()
         
