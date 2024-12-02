@@ -8,10 +8,10 @@ Para correrel sistema ejecute el main.
 ```
 
 Una vez ejecutado el main se mostrara un menu con las siguientes opciones:
-////
+![menu](public/primer menu.png)
 
 Se debe elegir la implementacion que se quiere probar. Luego se mostrara las siguientes opciones:
-////
+![menu](public/segundo menu.png)
 
 ### 1. Correr los test proporcionados por la catedra
 Para correr los test ingrese 1. El resultado de los test se encuentra en `./out/output.txt`.
@@ -48,3 +48,7 @@ Ejemplo:
 1
 1
 ```
+### Resultado de los test
+El resultado de este test se encuentra en el directorio out/ dentro del proyecto.
+Para guardar estos resultados cambiarle el nombre al archivo de salida.
+De lo contrario se sobreescribira.
