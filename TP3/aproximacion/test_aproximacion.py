@@ -1,10 +1,6 @@
 from aproximacion import *
+from common.test_reader import read_test_case
 import os
-import sys
-common_directory_path = '../common/'
-sys.path.append(common_directory_path)
-from test_reader import read_test_case
-
 
 def run_test(path=''):
 

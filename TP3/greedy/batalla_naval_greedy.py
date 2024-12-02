@@ -1,4 +1,4 @@
-from test_reader import read_test_case
+from common.test_reader import read_test_case
 import time
 
 VERTICAL = 'V'
@@ -60,7 +60,7 @@ def ubicar_barco(i, j, longitud, direccion , tablero , demandas_filas , demandas
             demandas_columnas[j] -= 1
 
 
-def batalla_naval_greedy (demandas_filas, demandas_columnas, barcos):
+def batalla_naval_greedy(demandas_filas, demandas_columnas, barcos):
 
     demanda_cumplida = 0
     demanda_total = sum(demandas_filas) + sum(demandas_columnas)
@@ -98,7 +98,7 @@ def batalla_naval_greedy (demandas_filas, demandas_columnas, barcos):
 
 def main ():
 
-    file = read_test_case ('TP3/12_12_21.txt')
+    file = read_test_case ('tests/given_tests/12_12_21.txt')
     
     filas = file [0] 
     columnas = file [1]

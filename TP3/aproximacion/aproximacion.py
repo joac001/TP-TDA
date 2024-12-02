@@ -1,9 +1,5 @@
 from utils import *
-import sys
-
-common_directory_path = '../common/'
-sys.path.append(common_directory_path)
-from test_reader import *
+from common.test_reader import *
 
 def aproximacion_batalla_naval(tablero, demanda_filas, demanda_columnas, barcos):
     barcos_ordenados = ordenar_barcos(barcos)
@@ -60,16 +56,3 @@ def save_output(test_name, barcos, demanda_total):
         print(f"Demanda cumplida: {demanda_cumplida}")
         print(f"Demanda total: {demanda_total}\n")
     sys.stdout = sys.__stdout__
-
-def main(path):
-    dataset = read_test_case(path)
-    demanda_filas, demanda_columnas, barcos = dataset
-    n = len(demanda_filas)
-    m = len(demanda_columnas)
-    tablero = [[None for _ in range(m)] for _ in range(n)]
-    puestos = aproximacion_batalla_naval(tablero, barcos, demanda_filas, demanda_columnas)
-    test_name = path.rsplit('/', 1)[-1]
-    save_output(test_name, puestos, sum(demanda_filas) + sum(demanda_columnas))
-
-path = '../tests/given_tests/8_7_10.txt'
-main(path)

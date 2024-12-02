@@ -1,16 +1,11 @@
+from backtracking.test_backtracking import \
+     run_test as run_test_backtracking
 
-import sys
-common_directory_path = './backtracking/'
-sys.path.append(common_directory_path)
-import test_backtracking
+from aproximacion.test_aproximacion import \
+     run_test as run_test_aproximacion
 
-common_directory_path = './aproximacion/'
-sys.path.append(common_directory_path)
-import test_aproximacion
-
-common_directory_path = './greedy/'
-sys.path.append(common_directory_path)
-import test_greedy
+from greedy.test_greedy import \
+     run_test as run_test_greedy
 
 BACKTRACKING = "1"
 APROXIMACION = "2"
@@ -58,11 +53,11 @@ def elegir_implementacion (option):
 
 def execute_backtracking(option):
     if option == "1":
-        test_backtracking("tests/given_tests")
+        run_test_backtracking("tests/given_tests")
     elif option == "2":
-        test_backtracking("tests/group_tests")
+        run_test_backtracking("tests/group_tests")
     elif option == "3":
-        test_backtracking()
+        run_test_backtracking()
     elif option == "5":
         return
     else:
@@ -70,11 +65,11 @@ def execute_backtracking(option):
 
 def execute_aproximacion(option):
     if option == GIVEN:
-        test_aproximacion("tests/given_tests")
+        run_test_aproximacion("tests/given_tests")
     elif option == GROUP:
-        test_aproximacion("tests/group_tests")
+        run_test_aproximacion("tests/group_tests")
     elif option == USER:
-        test_aproximacion()
+        run_test_aproximacion()
     elif option == SALIR:
         return
     else:
@@ -82,11 +77,11 @@ def execute_aproximacion(option):
 
 def execute_greedy(option):
     if option == GIVEN:
-        test_greedy("tests/given_tests")
+        run_test_greedy("tests/given_tests")
     elif option == GROUP:
-        test_greedy("tests/group_tests")
+        run_test_greedy("tests/group_tests")
     elif option == USER:
-        test_greedy()
+        run_test_greedy()
     elif option == SALIR:
         return
     else:

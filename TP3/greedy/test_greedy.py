@@ -1,10 +1,6 @@
-from batalla_naval_greedy import batalla_naval_greedy
+from greedy.batalla_naval_greedy import batalla_naval_greedy
+from common.test_reader import read_test_case
 import os
-import sys
-common_directory_path = '../common/'
-sys.path.append(common_directory_path)
-from test_reader import read_test_case
-
 
 def run_test(path=''):
 
