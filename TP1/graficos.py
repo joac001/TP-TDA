@@ -1,57 +1,68 @@
-# Imports necesarios para el notebook
-from random import seed
 
-from matplotlib import pyplot as plt
-import seaborn as sns
 import numpy as np
-import scipy as sp
+import matplotlib.pyplot as plt
+import time
+import os
+from monedas import monedas as max_coins
 
-from util import time_algorithm
-from monedas import monedas
+def probar_max_coins(tamanos, num_pruebas=3):
+    tiempos = []
+    errores = []  # Lista para almacenar la desviación estándar
+    for tamano in tamanos:
+        tiempo_por_tamano = []
+        for _ in range(num_pruebas):
+            monedas = np.random.randint(10, 1001, size=tamano)
+            tiempo_inicio = time.time()
+            max_coins(monedas, [], [])
+            tiempo_fin = time.time()
+            tiempo_por_tamano.append(tiempo_fin - tiempo_inicio)
+        tiempos.append(np.mean(tiempo_por_tamano))
+        errores.append(np.std(tiempo_por_tamano))
+    return tiempos, errores
 
-# Siempre seteamos la seed de aleatoridad para que los # resultados sean reproducibles
-seed(12345)
-np.random.seed(12345)
+def run_analysis():
+    
+    print("Corriendo analisis y generando graficos...")
+    
+    # Tamaños de prueba desde 10 hasta 1000 aumentando de a 10
+    tamanos = list(range(10, 1001, 10))
+    tiempos_ejecucion, errores = probar_max_coins(tamanos)
 
-sns.set_theme()
+    # Regresión de mínimos cuadrados para ajuste cuadrático
+    x = np.array(tamanos)
+    y = np.array(tiempos_ejecucion)
+    A = np.vstack([x**2, x, np.ones(len(x))]).T
+    a, b, c = np.linalg.lstsq(A, y, rcond=None)[0]
 
-def cuadrados_minimos(x, t):
-    f = lambda x, c1, c2: c1 * x + c2
+    # Creación de subplots: uno para el análisis principal y otro para el error
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 12))
 
-    c, pcov = sp.optimize.curve_fit(f, x, [t[n] for n in x])
+    # Gráfica principal
+    ax1.plot(tamanos, tiempos_ejecucion, 'bo-', label='Mediciones reales', alpha=0.5)
+    teorica = [n * (tiempos_ejecucion[0] / (tamanos[0])) for n in tamanos]
+    ax1.plot(tamanos, teorica, 'r--', label='Teórica O(n)')
+    ax1.set_xlabel('Número de Monedas')
+    ax1.set_ylabel('Tiempo de Ejecución (segundos)')
+    ax1.set_title('Análisis de Complejidad Temporal de max_coins')
+    ax1.grid(True)
+    ax1.legend()
 
-    print(f"c_1 = {c[0]}, c_2 = {c[1]}")
-    r = np.sum((c[0] * x + c[1] - [t[n] for n in x])**2)
-    print(f"Error cuadrático total: {r}")
+    # Gráfica de error
+    ax2.plot(tamanos, errores, 'r-', label='Error (Desviación Estándar)')
+    ax2.fill_between(tamanos, np.array(errores), alpha=0.2, color='red')
+    ax2.set_xlabel('Número de Monedas')
+    ax2.set_ylabel('Desviación Estándar')
+    ax2.set_title('Análisis de Error en las Mediciones')
+    ax2.grid(True)
+    ax2.legend()
+    
+    tmp_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tmp", "complexity_analysis.png")
+    
 
-    return c
+    if not os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "tmp")):
+        os.mkdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), "tmp"))
 
-def graficar_datos(x, t, c):
-    ax: plt.Axes
-    fig, ax = plt.subplots()
-    ax.plot(x, [t[i] for i in x], label="Medición")
-    ax.set_title('Tiempo de ejecución del algoritmo')
-    ax.set_xlabel("Cantidad de monedas")
-    ax.set_ylabel('Tiempo de ejecución (s)')
-
-    ax.plot(x, [c[0] * n + c[1] for n in x], 'r--', label="Ajuste")
-    ax.legend()
-
-def graficar_error(x, t, c):
-    ax: plt.Axes
-    fig, ax = plt.subplots()
-    errors = [np.abs(c[0] * n + c[1] - t[n]) for n in x]
-    ax.plot(x, errors)
-    ax.set_title('Error de ajuste')
-    ax.set_xlabel('Tamaño del array')
-    ax.set_ylabel('Error absoluto (s)')
-
-def correr_grafico():
-    x = (10, 100, 1000, 10000, 100000, 1000000) # Cantidad de monedas
-    t = time_algorithm(monedas, x, lambda s: [np.random.randint(1, 999, size=s).tolist(), [], []])
-    c = cuadrados_minimos(np.array(x), t)
-
-    graficar_datos(x, t, c)
-    #graficar_error(x, t, c)
-
+    plt.tight_layout()
+    plt.savefig(tmp_file)
     plt.show()
+    print(f"Analisis completo. Imagen guardada en {tmp_file}")

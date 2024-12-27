@@ -1,32 +1,31 @@
 ﻿# TP1 grupal de TDA
 ## Instrucciones para correr el sistema
 
+### Requisitos
+Para instalar las dependencias para la generación de gráficos:
+ ```bash
+ pip install -r requirements.txt
+ ```
+
 ### Correr el sistema
-Para correr el sistema ejecute el main.
+Para correr el sistema ejecute el main indicando el path de la carpeta  o archivo con los test a correr:
 ```bash
-...\TP-TDA\TP1> python3 main.py
+...\TP-TDA\TP1> python main.py path
+```
+Si se ingresa el path a una carpeta se correran todos los test en esa carpeta.
+
+### Correr los test proporcionados por la catedra
+
+```bash
+...\TP-TDA\TP1> python main.py tests/given_tests
 ```
 
-Una vez ejecutado el main se mostrara un menu con las siguientes opciones:
+### Correr los test creados por el grupo
+```bash
+...\TP-TDA\TP1> python main.py tests/group_tests
+```
 
-![imagen](https://github.com/user-attachments/assets/4d26aa32-48d4-4368-8ea8-15febca643c7)
-
-### 1. Correr a partir de la ruta completa de un archivo
-Para correr el programa a partir de la ruta de un archivo, ingrese 1. La salida estará en `/out/output.txt`
-
-### 2. Correr los test proporcionados por la catedra
-Para correr los test ingrese 2. Por consola se imprimirá si la prueba fue exitosa, con la ganancia correspondiente.
-
-### 3. Correr los test creados por el grupo
-Para correr los test ingrese 3. Por consola se imprimirá si la prueba fue exitosa, con la ganancia correspondiente.
-
-### 4. Correr los test creados por mí
-Para correr los test creados por usted, ingrese 4. Estos tests deben crearse en el directorio `/tests/user_tests` según el formato detallado más abajo.
-
-### 5. Correr el gráfico de datos
-Para correr el gráfico de datos ingrese 5. Luego, se abrirá una ventana con el gráfico.
-
-#### Requisitos de los archivos de test
+### Requisitos de los archivos de test
 
 El sistema leerá todos los archivos `.txt` que se encuentran en los directorios de pruebas. Estos archivos deben cumplir con los siguientes formatos:
 
@@ -40,3 +39,15 @@ Al ejecutarse con los datos leídos, el sistema comparará la salida con el arch
 2. En la siguiente línea debe tener la salida esperada del programa contando cuál pieza toma cada jugador.
 3. Finalmente, en la última línea debe tener la ganancia siguiendo el formato `Ganancia de Sophia: {ganancia}`
 4. Cualquier otra linea que no sea la que contenga dichos valores debe comenzar con '#'.
+
+### Hacer un analisis de compljidad
+Para correr un analisis de complejidad ingrese la palabra 'analisis' en lugar del path. Se analizaran sets de 10 a 1000 monedas.
+
+```bash
+...\TP-TDA\TP1> python main.py analisis
+```
+
+### Resultado de los test
+El resultado de este test se encuentra en el directorio out/ dentro del proyecto.
+Para guardar estos resultados cambiarle el nombre al archivo de salida.
+De lo contrario se sobreescribira.

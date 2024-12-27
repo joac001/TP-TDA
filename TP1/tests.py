@@ -1,52 +1,106 @@
-import os, inspect
-from pathlib import Path
-from monedas import monedas
+import os
+from monedas import monedas as max_coins
 
-def leer_casos(dir):
-    archivos = dir.iterdir()
-    casos = {}
-    for archivo in archivos:
-        ind = str(archivo).rfind('/')
-        nombre_arch = str(archivo)[ind+1:]
-        if nombre_arch == "Resultados Esperados.txt":
-            continue
-        with open(archivo, 'r') as id_archivo:
-            for linea in id_archivo:
-                if linea[0] == '#':
-                    continue
-                casos[nombre_arch] = [int(x) for x in linea.strip().split(';')]
-    return dict(sorted(casos.items(), key=lambda item: int(item[0].split('.')[0])))
+'''
+    Pre:    
+        Se espera que la ruta enviada sea la carpeta contenedora de los archivos con los tests. 
+        El archivo enviado con los test debe contener el set de numeros de la siguiente forma:
+            w;x;y;...;z
+        Cualquier otra linea que no se la que contenga los numeros debe comenzar con '#'.
 
-def leer_resultados(dir):
-    archivo = dir.joinpath("Resultados Esperados.txt")
-    resultados = {}
-    with open(archivo, 'r') as id_archivo:
-        for linea in id_archivo:
-            if linea[0] == '#':
+    Pos:
+        Devuelve un array 'numbers' tal que represente el set de numeros del archivo.
+'''
+def read_test_case(path):
+    numbers = []
+    
+    with open(path, 'r') as file:
+        for line in file:
+            line = line.strip()
+            
+            if line.startswith('#'):
                 continue
-            elif ".txt" in linea:
-                clave = linea[:linea.rfind(".txt") + 4]
-                resultados[clave] = [next(id_archivo).strip(), next(id_archivo).strip()]
-    return resultados
+            else:
+                try:
+                    numbers = list(map(int, line.split(';')))
+                except ValueError:
+                    print(f"\n\nEl archivo {path} no respeta los requisitos de los archivos de tests.\nPuedes encontrar los requisitos en el archivo READEME.md.")
+                    return []
+    
+    return numbers
 
-def correr_tests(ruta):
-    dir_actual = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-    dir_tests = Path(dir_actual + ruta)
-    casos = leer_casos(dir_tests)
-    resultados = leer_resultados(dir_tests)
-    for caso in casos:
-        arr_sophia = []
-        arr_mateo = []
+def mostrar_mensaje ():
+    print("-"*75) 
+    print("El resultado de este test se encuentra en el directorio out/ dentro del proyecto.")
+    print("Para guardar estos resultados cambiarle el nombre al archivo de salida.\nDe lo contrario se sobreescribira.")
+    print("-"*75)
+    print()
+ 
+def run_single_test (out_file, obtenidos, test_set, file):
+    
+    sophia = [] 
+    mateo = []
+    steps = max_coins(test_set, sophia, mateo)
 
-        salida_esperada = resultados[caso][0]
-        ganancia_esperada = resultados[caso][1]
+    obtenidos.append([sophia, mateo, steps])
+    out_file.write(f"Para {file} se obtuvo:\n")
+    out_file.write(f"Ganancia Sophia: {sophia}\n")
+    out_file.write(f"Ganancia Mateo: {mateo}\n\n")
+    out_file.write(f"Se jugo de la siguiente manera: \n")
 
-        salida = monedas(casos[caso], arr_sophia, arr_mateo)
-        ganancia = "Ganancia de Sophia: {}".format(sum(arr_sophia))
+    steps_len = len(steps)
+    for step in steps:
+        if step != steps[steps_len - 1]:
+            out_file.write(f"{step}")
+        else:
+            out_file.write(f"{step}")
+    out_file.write("\n\n")
 
-        print("Probando caso: {}".format(caso))
+def run_test(path=''):
 
-        assert(salida == salida_esperada)
-        assert(ganancia == ganancia_esperada)
+    if path == '':
+        print("Ingrese la ruta absoluta de la carpeta con los test a correr.")
+        path = input("Ruta: ")
+    
+    out_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), "out")
+    obtenidos = []
 
-        print("Éxito en la prueba, ganancias de Sophia: {}".format(sum(arr_sophia)))
+    with open(f"{out_directory}/output.txt", "w") as out_file:
+        
+        if (os.path.isfile(path)):
+            mostrar_mensaje()
+            test_set = read_test_case(path)
+            run_single_test(out_file, obtenidos , test_set, path)
+
+        elif (os.path.isdir(path)):
+            test_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), path)
+    
+            try:
+                os.listdir(test_directory)
+            except NotADirectoryError:
+                print("\n\nLa ruta enviada no es un directorio.")
+                return
+
+            
+
+            print("#"*75)
+            print()
+            print(f"Corriendo test en {test_directory}")
+            mostrar_mensaje()
+            print("#"*75)
+
+    
+            out_file.write(f"Se corrieron los tests en {test_directory}\n")
+        
+            for file in os.listdir(test_directory):
+                if file.endswith(".txt"):
+                    p = os.path.join(test_directory, file)
+                    test_set = read_test_case(p)
+                    if test_set == []:
+                        continue
+                    run_single_test(out_file, obtenidos , test_set, file)
+    
+    out_file.close()
+        
+    print("\nTarea terminada.\n")
+    return
