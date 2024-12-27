@@ -2,11 +2,12 @@
 ## Instrucciones para correr el sistema
 
 ### Correr el sistema
-Para correr el sistema ejecute el main indicando el path de la carpeta con los test a correr:
+Para correr el sistema ejecute el main indicando el path de la carpeta  o archivo con los test a correr:
 
 ```bash
 ...\TP-TDA\TP3\backtracking> python main.py path
 ```
+Si se ingresa el path a una carpeta se correran todos los test en esa carpeta.
 
 ### Correr los test proporcionados por la catedra
 ```bash

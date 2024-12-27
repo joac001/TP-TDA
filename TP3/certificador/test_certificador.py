@@ -30,33 +30,46 @@ def run_test(path=''):
         print("Ingrese la ruta absoluta de la carpeta con los test a correr.")
         path = input("Ruta: ")
     
-
     test_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), path)
     
-    try:
-        os.listdir(test_directory)
-    except NotADirectoryError:
-        print("\n\nLa ruta enviada no es un directorio.")
-        return
+    if (os.path.isfile(path)):
 
-    print("#"*75)
-    print()
-    print(f"Corriendo test en {test_directory}")
-    print()
-    print("#"*75)
+        filas, columnas, barcos, tablero = read_test_case(path)
+        
+        if ((not filas) or (not columnas) or (not barcos) or (not tablero)) :
+            return "El archivo no respeta el formato"
 
-    for file in os.listdir(test_directory):
-        if file.endswith(".txt"):
-            p = os.path.join(test_directory, file)
-            filas, columnas, barcos, tablero = read_test_case(p)
-            if ((not filas) or (not columnas) or (not barcos) or (not tablero)) :
-                continue
+        print (f"\nPara {path} se obtuvo:")                
+        if (certificador_batalla_naval (tablero, barcos, filas, columnas)):
+            print ("La solucion es valida.")
+        else:
+            print("La solucion no es valida.")
+    elif(os.path.isdir(path)):
+        try:
+            os.listdir(test_directory)
+        except NotADirectoryError:
+            print("\n\nLa ruta enviada no es un directorio.")
+            return
 
-            print (f"\nPara {file} se obtuvo:")                
-            if (certificador_batalla_naval (tablero, barcos, filas, columnas)):
-                print ("La solucion es valida.")
-            else:
-                print("La solucion no es valida.")
+        print("#"*75)
+        print()
+        print(f"Corriendo test en {test_directory}")
+        print()
+        print("#"*75)
+
+        for file in os.listdir(test_directory):
+            if file.endswith(".txt"):
+                p = os.path.join(test_directory, file)
+                filas, columnas, barcos, tablero = read_test_case(p)
+                if ((not filas) or (not columnas) or (not barcos) or (not tablero)) :
+                    continue
+
+                print (f"\nPara {file} se obtuvo:")                
+                
+                if (certificador_batalla_naval (tablero, barcos, filas, columnas)):
+                    print ("La solucion es valida.")
+                else:
+                    print("La solucion no es valida.")
         
     print("\nTarea terminada.\n")
     return
