@@ -1,6 +1,9 @@
-from backtracking.backtracking import batalla_naval, save_output
-from common.test_reader import read_test_case
+from backtracking import batalla_naval, save_output
+
 import os
+ruta_externa = os.path.abspath("../common")
+from test_reader import read_test_case
+
 
 def run_test(path=''):
 

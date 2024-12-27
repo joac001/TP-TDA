@@ -32,7 +32,7 @@ def certificador_batalla_naval (tablero, barcos, restricciones_filas, restriccio
 
     for i in range(n):
         for j in range(m):
-            if ( (tablero[i][j] == 1) and not visitados[i][j] ):
+            if ( (tablero[i][j] != 0) and not visitados[i][j] ):
                 barco_actual = []
                 dfs(i, j, barco_actual)
                 barcos_identificados.append(barco_actual)

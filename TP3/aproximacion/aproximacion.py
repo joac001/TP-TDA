@@ -1,5 +1,11 @@
-from aproximacion.utils import *
-from common.test_reader import *
+from utils import *
+
+import sys
+import os
+ruta_externa = os.path.abspath("../common")
+sys.path.append(ruta_externa)
+
+from test_reader import *
 
 def aproximacion_batalla_naval(tablero, demanda_filas, demanda_columnas, barcos):
     barcos_ordenados = ordenar_barcos(barcos)
@@ -54,5 +60,5 @@ def save_output(test_name, barcos, demanda_total, f):
         else:
             print(f"{barco_idx}: ", pos[0])
     print(f"Demanda cumplida: {demanda_cumplida}")
-    print(f"Demanda total: {demanda_total}\n")
+    print(f"Demanda incumplida: {demanda_total}\n")
     sys.stdout = sys.__stdout__

@@ -1,4 +1,3 @@
-from common.test_reader import read_test_case
 
 VERTICAL = 'V'
 HORIZONTAL = "H"

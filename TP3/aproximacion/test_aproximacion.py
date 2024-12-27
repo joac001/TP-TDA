@@ -1,6 +1,11 @@
-from aproximacion.aproximacion import *
-from common.test_reader import read_test_case
+from aproximacion import *
+
+import sys
 import os
+ruta_externa = os.path.abspath("../common")
+sys.path.append(ruta_externa)
+from test_reader import read_test_case
+
 
 def run_test(path=''):
 

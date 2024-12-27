@@ -1,4 +1,10 @@
-from common.game_logic import hay_adyacencias 
+
+import sys
+import os
+ruta_externa = os.path.abspath("../common")
+sys.path.append(ruta_externa)
+
+from game_logic import hay_adyacencias 
 
 '''
     Pre: 'demandas' es un array con los valores de las demandas que

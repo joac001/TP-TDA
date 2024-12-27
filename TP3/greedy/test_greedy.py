@@ -1,6 +1,11 @@
-from greedy.batalla_naval_greedy import batalla_naval_greedy
-from common.test_reader import read_test_case
+from batalla_naval_greedy import batalla_naval_greedy
+
+import sys
 import os
+ruta_externa = os.path.abspath("../common")
+sys.path.append(ruta_externa)
+
+from test_reader import read_test_case
 
 def run_test(path=''):
 

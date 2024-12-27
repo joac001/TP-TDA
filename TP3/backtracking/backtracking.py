@@ -1,8 +1,12 @@
-from backtracking.utils import *
-import sys
+from utils import *
 
-from common.game_logic import *
-from common.test_reader import *
+import sys
+import os
+ruta_externa = os.path.abspath("../common")
+sys.path.append(ruta_externa)
+
+from game_logic import *
+from test_reader import *
 
 def batalla_naval_bt(tablero, barcos, demanda_filas, demanda_columnas,
                      puestos, optimos, i):

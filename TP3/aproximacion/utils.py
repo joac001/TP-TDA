@@ -5,7 +5,7 @@ import sys
 
 common_directory_path = '../common/'
 sys.path.append(common_directory_path)
-from common.game_logic import *
+from game_logic import *
 
 def ordenar_barcos(barcos):
     referencia_barcos = list(enumerate(barcos))
