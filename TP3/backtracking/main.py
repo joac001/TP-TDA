@@ -11,7 +11,7 @@ def main():
     ruta = str(sys.argv[1])
     run_test(ruta)
     
-    with open("..\out\output.txt", "r") as archivo:
+    with open("../out/output.txt", "r") as archivo:
         for linea in archivo:
             print(linea, end="")
 
