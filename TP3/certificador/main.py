@@ -8,7 +8,7 @@ def main():
         print("Por favor, proporciona una ruta como argumento.")
         sys.exit(1)
 
-    ruta = str(sys.argv[1])
+    ruta = " ".join(sys.argv[1:])
     run_test(ruta)
 
 
