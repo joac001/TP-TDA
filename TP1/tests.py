@@ -44,8 +44,9 @@ def run_single_test (out_file, obtenidos, test_set, file):
 
     obtenidos.append([sophia, mateo, steps])
     out_file.write(f"Para {file} se obtuvo:\n")
-    out_file.write(f"Ganancia Sophia: {sophia}\n")
-    out_file.write(f"Ganancia Mateo: {mateo}\n\n")
+    out_file.write(f"Monedas de Sophia: {sophia}\n")
+    out_file.write(f"Monedas de Mateo: {mateo}\n")
+    out_file.write(f"Ganancia de Sophia: {sum(sophia)}\n\n")
     out_file.write(f"Se jugo de la siguiente manera: \n")
 
     steps_len = len(steps)
