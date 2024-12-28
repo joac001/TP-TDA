@@ -43,7 +43,7 @@ def run_analysis():
     ax1.plot(tamanos, teorica, 'r--', label='Teórica O(n)')
     ax1.set_xlabel('Número de Monedas')
     ax1.set_ylabel('Tiempo de Ejecución (segundos)')
-    ax1.set_title('Análisis de Complejidad Temporal de max_coins')
+    ax1.set_title('Análisis de Complejidad Temporal de monedas')
     ax1.grid(True)
     ax1.legend()
 

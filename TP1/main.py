@@ -2,7 +2,6 @@ from graficos import run_analysis
 from monedas import ejecutar_desde_archivo
 from tests import run_test
 import sys
-import os
 
 def main():
 
@@ -16,7 +15,7 @@ def main():
         ruta = str(sys.argv[1])
         run_test(ruta)
 
-        with open("out\output.txt", "r") as archivo:
+        with open("out/output.txt", "r") as archivo:
             for linea in archivo:
                 print(linea, end="")
 

@@ -16,7 +16,7 @@ Si se ingresa el path a una carpeta se correran todos los test en esa carpeta.
 
 #### Requisitos de los archivos de test
 
-El sistema tiene la capacidad de ejecutar más de un test a la vez, por lo que para la ruta absoluta se espera que sea un directorio, NO un archivo. Luego el sistema leerá todos los archivos `.txt` que se encuentran en el directorio. Estos archivos deben cumplir con los siguientes formatos: 
+Los archivos deben cumplir con los siguientes formatos: 
 
 1. Los archivos con los test deben ser `.txt`
 2. Se espera recibir cuatro sets.
