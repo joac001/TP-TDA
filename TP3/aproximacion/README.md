@@ -21,13 +21,13 @@ Si se ingresa el path a una carpeta se correran todos los test en esa carpeta.
 
 #### Requisitos de los archivos de test
 
-El sistema tiene la capacidad de ejecutar más de un test a la vez, por lo que para la ruta absoluta se espera que sea un directorio, NO un archivo. Luego el sistema leerá todos los archivos `.txt` que se encuentran en el directorio. Estos archivos deben cumplir con los siguientes formatos: 
+Los archivos deben cumplir con los siguientes formatos: 
 
 1. Los archivos con los test deben ser `.txt`
 2. Se espera recibir tres sets.
 3. El primer set debe corresponder a las demandas de las filas.
 4. El segundo set debe corresponder a las demandas de las columnas.
-5. El tercer set debe corresponder a laslongitudes de los barcos.
+5. El tercer set debe corresponder a las longitudes de los barcos.
 6. Los sets se deben separar con una linea vacia.
 7. Cada elemento del set debe escribirse en una linea distinta. Cada linea debe contener como maximo un numero.
 8. Cualquier otra linea que no sea la que contenga dichos valores debe comenzar con '#'.
