@@ -13,10 +13,11 @@ def main():
     if (sys.argv[1] == "analisis"):
         run_analysis()
     else:        
-        ruta = str(sys.argv[1])
+        #ruta = str(sys.argv[1])
+        ruta = " ".join(sys.argv[1:])
         run_test(ruta)
-
-        with open("out\output.txt", "r") as archivo:
+        
+        with open("out/output.txt", "r") as archivo:
             for linea in archivo:
                 print(linea, end="")
 
