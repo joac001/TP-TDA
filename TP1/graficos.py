@@ -53,8 +53,8 @@ def graficar_datos(x, t, c, file):
 
 def run_analysis():
     print("Corriendo analisis y generando graficos...")
-    #x = (10, 100, 1000, 10000, 50000, 100000) # Cantidad de monedas
-    x = np.linspace(10, 100000, 50, dtype=int)  # Cantidad de monedas con más puntos de prueba
+    x = (10, 100, 1000, 10000, 50000, 100000) # Cantidad de monedas
+    #x = np.linspace(10, 100000, 50, dtype=int)  # Cantidad de monedas con más puntos de prueba
 
     t = time_algorithm(monedas, x, lambda s: [np.random.randint(1, 999, size=s).tolist(), [], []])
     c = cuadrados_minimos(np.array(x), t)
